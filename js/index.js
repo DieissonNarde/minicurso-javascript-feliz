@@ -1,6 +1,11 @@
+const root = document.querySelector('#root')
+const textTitle = 'Dificuldade'
 
-const root = document.querySelector('#root');
-const title = document.createElement('h1');
-title.textContent = 'Dificuldade';
+// Tagged Template String
+const title = Title`
+    color: red;
+    font-size: 20px;
+    ${textTitle}
+`
 
-root.append(title)
+root.insertAdjacentHTML('beforeend', title)
